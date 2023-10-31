@@ -17,11 +17,11 @@ func NewStocksController(db *gorm.DB) *StocksController {
     return &StocksController{DB: db}
 }
 
-// GetAllStocks returns a list of all stocks.
+// GetAllStocks returns a list of all stocks with a limit of 100.
 func (c *StocksController) GetAllStocks(ctx *gin.Context) {
     var stocks []models.Stock
 
-    if err := c.DB.Find(&stocks).Error; err != nil {
+    if err := c.DB.Limit(100).Find(&stocks).Error; err != nil {
         ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch stocks"})
         return
     }
