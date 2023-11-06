@@ -6,26 +6,26 @@ import (
 
 type Stock struct {
     ID               uint      `gorm:"primary_key" json:"id"`
-    TIMESTAMP        time.Time `json:"TIMESTAMP"`
+    Timestamp        time.Time `json:"TIMESTAMP"`
     ScCode           float64   `json:"ScCode"`
     ScName           string    `json:"ScName"`
-    SYMBOL           string    `json:"SYMBOL"`
-    OPEN             float64   `json:"OPEN"`
-    HIGH             float64   `json:"HIGH"`
-    LOW              float64   `json:"LOW"`
-    CLOSE            float64   `json:"CLOSE"`
+    Symbol           string    `json:"SYMBOL"`
+    Open             float64   `json:"OPEN"`
+    High             float64   `json:"HIGH"`
+    Low              float64   `json:"LOW"`
+    Close            float64   `json:"CLOSE"`
     Last             float64   `json:"Last"`
-    PREVCLOSE        float64   `json:"PREVCLOSE"`
-    SERIES           string    `json:"SERIES"`
-    BSENSETotalTrades float64   `json:"BSE+NSE_TotalTrades"`
-    BSENSEVol        float64   `json:"BSE+NSE_Vol"`
-    BSENSEDeliVol    float64   `json:"BSE+NSE_DeliVol"`
-    BSENSEDeli       float64   `json:"BSE+NSE_Deli%"`
-    BSENSETurnover   float64   `json:"BSE+NSE_TurnoverRsCr"`
-    BSENSEDeliVal    float64   `json:"BSE+NSE_DeliValRsCr"`
-    BSENSEPerOrder   float64   `json:"BSE+NSE_PerOrderWorhRs"`
-    BSENSEPerOrderQty float64   `json:"BSE+NSE_PerOrderQty"`
-    BSENSEAvgPrice    float64   `json:"BSE+NSE_AvgPrice"`
+    PrevClose        float64   `json:"PREVCLOSE"`
+    Series           string    `json:"SERIES"`
+    BSE_NSE_TotalTrades float64   `json:"BSE+NSE_TotalTrades"`
+    BSE_NSE_Vol        float64   `json:"BSE+NSE_Vol"`
+    BSE_NSE_DeliVol    float64   `json:"BSE+NSE_DeliVol"`
+    BSE_NSE_Deli       float64   `json:"BSE+NSE_Deli%"`
+    BSE_NSE_Turnover   float64   `json:"BSE+NSE_TurnoverRsCr"`
+    BSE_NSE_DeliVal    float64   `json:"BSE+NSE_DeliValRsCr"`
+    BSE_NSE_PerOrder   float64   `json:"BSE+NSE_PerOrderWorhRs"`
+    BSE_NSE_PerOrderQty float64   `json:"BSE+NSE_PerOrderQty"`
+    BSE_NSE_AvgPrice    float64   `json:"BSE+NSE_AvgPrice"`
     ISIN              string    `json:"ISIN"`
 }
 
